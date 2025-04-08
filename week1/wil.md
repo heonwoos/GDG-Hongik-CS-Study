@@ -83,6 +83,41 @@ word의 크기로 32bit/64bit 컴퓨터가 분류된다.
 - cache entry를 만들 때 공간이 부족하다면 이미 존재하는 cache entry를 삭제해야 하는데, **replacement policy**라는 기준에 따라 어떠한 entry가 우선적으로 삭제된다.
 - 캐시에 쓰인 데이터는 언젠가는 메인 메모리에도 쓰여야하는데, **write policy**라는 기준에 따라 쓰일 타이밍이 결정된다.
 
+#### 왜 SRAM이 DRAM보다 빠르고 비쌀까?
+
+<table>
+    <tr>
+        <th>특징</th>
+        <th>SRAM</th>
+        <th>DRAM</th>
+    </tr>
+    <tr>
+        <td>구성</td>
+        <td>트랜지스터(MOSFET) 6개 => 플립플롭</td>
+        <td>트랜지스터(MOSFET) 1개 + 커패시터 1개</td>
+    </tr>
+    <tr>
+        <td>데이터 유지</td>
+        <td>전원이 계속 가해진다면 유지됨</td>
+        <td>커패시터가 전압을 잃으므로 refresh가 필요함 </td>
+    </tr>
+    <tr>
+        <td>속도</td>
+        <td>refresh가 없음; 빠름</td>
+        <td>주기적 refresh; 느림</td>
+    </tr>
+    <tr>
+        <td>집적도</td>
+        <td>구성이 복잡함; 낮음</td>
+        <td>구성이 단순함; 높음</td>
+    </tr>
+    <tr>
+        <td>가격</td>
+        <td>비쌈</td>
+        <td>저렴</td>
+    </tr>
+</table>
+
 ## 2. OS가 하드웨어를 관리한다.
 
 ### File
